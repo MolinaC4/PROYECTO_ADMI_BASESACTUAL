@@ -1,0 +1,143 @@
+/*Inicio estilos de Periodos*/
+#periodos{
+	position: relative;
+	width: 400px;
+	height:695px;
+	margin: auto;
+	top: -15px;
+	border: 1px solid #d0d0d0;
+}
+
+h5{
+	position: relative;
+	left: 50px;
+}
+
+
+#primerperiodo{
+	width: 1213px;
+	height: 190px;
+	padding: 8px;
+	background-color: #FFFFFF;
+	position: relative;
+	top: 15px;
+	left: 50px;
+	border: 2px solid #043732;
+	border-radius: 6px;
+	box-shadow: 5px 5px 5px #043732; /*sombra para el elemento*/
+}
+
+#segundoperiodo{
+	width: 1213px;
+	height: 190px;
+	padding: 8px;
+	background-color: #FFFFFF;
+	position: relative;
+	top: 15px;
+	left: 50px;
+	border: 2px solid #043732;
+	border-radius: 6px;
+	box-shadow: 5px 5px 5px #043732; /*sombra para el elemento*/
+}
+
+#creditosp{
+	text-align: center;
+	position: relative;
+	top: 70px;
+	color: #AAA;
+	font-size: 16px;
+}
+
+#datepicker1{
+	width: 80px;
+	height: 20px;
+}
+
+#datepicker2{
+	position: relative;
+	width: 80px;
+	height: 20px;
+	left: 4px;
+}
+
+#datepicker3{
+	width: 80px;
+	height: 20px;
+}
+
+#datepicker4{
+	position: relative;
+	width: 80px;
+	height: 20px;
+	left: 4px;
+}
+
+.boton{
+	border-radius: 60px;
+	background: #FFFFFF;
+	color: #AAA;
+	position: relative;
+	border: 2px solid;
+	padding: 5px;
+	margin: 10px 0 0 0;
+	height: 37px;
+	width: 60px;
+}
+
+#btn_cargarPeriodos{
+	position: relative;
+	left: 50px;
+	height: 30px;
+	width: 120px;
+	top: -25px;	
+}
+
+/*Final estilos de Periodos*/
+
+/*Inicio estilos de Estados Financieros*/
+#estadosFinancieros{
+	position: 100%;
+	width: 400px;
+	height:695px;
+	margin: auto;
+	top: -15px;
+	border: 1px solid #d0d0d0;
+}
+
+html{
+	overflow-x: hidden;
+}
+
+h3{
+	position: relative;
+	left: 50px;
+	font-family: serif;
+}
+
+h6{
+	position: relative;
+	left: 50px;
+	font-family: serif;
+}
+
+#tablaestado{
+	position: relative;
+	left: 50px;
+	width: 1213px;
+	height: 280px;
+}
+
+#tablabalance{
+	position: relative;
+	left: 50px;
+	width: 1213px;
+	height: 280px;
+}
+
+#creditos{
+	text-align: center;
+	position: relative;
+	top: 390px;
+	color: #AAA;
+	font-size: 16px;
+}
