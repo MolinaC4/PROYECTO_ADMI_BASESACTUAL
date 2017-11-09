@@ -1,4 +1,4 @@
-<?php 
+<?php   
   //Inicio de la sesión, ubicados antes que cualquier salida HTML
 
   require_once("global.php"); //ARCHIVO BÁSICO GLOBAL DE CONFIGURACIÓN

@@ -56,6 +56,14 @@
 			return $fila = $conexion->extraer_registro();			 
 		}
 
+		//Funcion que se encarga de mostrar la utilidad por accion realizadas en el periodo
+		public function consultar_UtilidadPorAccion_mdl($fecha1,$fecha2) {
+			$conexion = new mdl_Conexion();
+			$conexion->consulta("CALL UtilidadPorAccion('".$fecha1."','".$fecha2."')");
+							
+			return $fila = $conexion->extraer_registro();			 
+		}
+
 		//Funcion que se encarga de mostrar el costo de ventas realizadas en el periodo
 		public function consultar_costoVentas_mdl($fecha1,$fecha2) {
 			$conexion = new mdl_Conexion();
@@ -140,6 +148,14 @@
 		public function consultar_balanceGeneral_totalActivosCirculantes_mdl($fecha1,$fecha2) {
 			$conexion = new mdl_Conexion();
 			$conexion->consulta("CALL balanceGeneral_totalActivosCirculantes('".$fecha1."','".$fecha2."')");
+							
+			return $fila = $conexion->extraer_registro();			 
+		}
+
+		//Funcion que se encarga de mostrar la cantidad de total impuestos realizadas en el periodo
+		public function consultar_Impuestos_mdl($fecha1,$fecha2) {
+			$conexion = new mdl_Conexion();
+			$conexion->consulta("CALL Impuestos('".$fecha1."','".$fecha2."')");
 							
 			return $fila = $conexion->extraer_registro();			 
 		}

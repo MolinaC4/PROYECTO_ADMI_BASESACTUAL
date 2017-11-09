@@ -11,9 +11,12 @@
 
 		function __construct()
 		{
+			//$this->servidor = "localhost";
 			$this->servidor = "localhost";
 			$this->usuario = "root";
-			$this->clave = "782221mm";
+			//$this->clave = "782221mm"; //ALE
+			$this->clave = "1234"; //WIS
+			//$this->clave = "782221mm"; //MILTON
 			$this->base_datos = "bd_financiero";
 			$this->conectar_base_datos();
 		}

@@ -70,6 +70,17 @@
 			}
 		}
 
+		//Funcion que se encarga de tomar las fechas selecciodas de los datepicker del primer y segundo periodo para impuestos
+		public function Impuestos($fecha1, $fecha2){
+			$periodo = new mdl_Periodo();
+			$resul = $periodo->consultar_Impuestos_mdl($fecha1,$fecha2);
+			if (isset($resul[0])) {
+				return $resul[0];
+			}else{
+				return 0;
+			}
+		}
+
 		//Funcion que se encarga de tomar las fechas selecciodas de los datepicker del primer y segundo periodo para gastos financieros
 		public function gasFinan($fecha1, $fecha2){
 			$periodo = new mdl_Periodo();
@@ -131,6 +142,28 @@
 		public function inventarios($fecha1, $fecha2){
 			$periodo = new mdl_Periodo();
 			$resul = $periodo->consultar_balanceGeneral_inventarios_mdl($fecha1,$fecha2);
+			if (isset($resul[0])) {
+				return $resul[0];
+			}else{
+				return 0;
+			}
+		}
+
+		//Funcion que se encarga de tomar las fechas selecciodas de los datepicker del primer y segundo periodo para utilidad por accion
+		public function UtilidadPorAccion1($fecha1, $fecha2){
+			$periodo = new mdl_Periodo();
+			$resul = $periodo->consultar_UtilidadPorAccion_mdl($fecha1,$fecha2);
+			if (isset($resul[0])) {
+				return $resul[0];
+			}else{
+				return 0;
+			}
+		}
+
+		//Funcion que se encarga de tomar las fechas selecciodas de los datepicker del primer y segundo periodo para utilidad por accion
+		public function UtilidadPorAccion2($fecha1, $fecha2){
+			$periodo = new mdl_Periodo();
+			$resul = $periodo->consultar_UtilidadPorAccion_mdl($fecha1,$fecha2);
 			if (isset($resul[0])) {
 				return $resul[0];
 			}else{

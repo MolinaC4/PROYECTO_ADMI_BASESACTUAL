@@ -15,6 +15,10 @@
 		$_SESSION['utiNeta1'] = 0;
 		$_SESSION['utiNeta2'] = 0;
 		//Variables utilizadas para el balance general
+		$_SESSION['Impuestos1'] = 0;
+		$_SESSION['Impuestos2'] = 0;
+		$_SESSION['UtilidadPorAccion1'] = 0;
+		$_SESSION['UtilidadPorAccion2'] = 0;
 		$_SESSION['efectivo1'] = 0;
 		$_SESSION['efectivo2'] = 0;
 		$_SESSION['cxc1'] = 0;

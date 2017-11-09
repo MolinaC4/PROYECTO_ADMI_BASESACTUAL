@@ -60,10 +60,10 @@
 	    	<?php require(__VWS_PATH . "liquidez.php");?>
 	    </div>
 	    <div id="Deuda" class="col s12">
-	    	
+	    	<?php require(__VWS_PATH . "endeudamiento.php");?>
 	    </div>
 	    <div id="Rentabilidad" class="col s12">
-	    	
+	    	<?php require(__VWS_PATH . "rentabilidad.php");?>
 	    </div>
 	    <div id="Cobertura" class="col s12">
 	    	<?php require(__VWS_PATH . "Rcobertura.php");?>

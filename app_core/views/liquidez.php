@@ -12,7 +12,7 @@
 	$_SESSION['pasiCircu2'] = $periodo->TotalP($_SESSION['fecha3'],$_SESSION['fecha4']);
 	$_SESSION['invent1'] =  $periodo->inventarios($_SESSION['fecha1'],$_SESSION['fecha2']);
 	$_SESSION['invent2'] =  $periodo->inventarios($_SESSION['fecha3'],$_SESSION['fecha4']);
-
+ 
   	$HTML = new mdl_Html();
 ?>
 
