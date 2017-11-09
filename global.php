@@ -3,7 +3,7 @@
   // ------ Variables que definen el nombre actual del hosting -------
 
   $myhost="http://localhost";
-  $myproject="PROYECTO_ADMI_BASES ACTUAL";
+  $myproject="PROYECTO_ADMI_BASESACTUAL";
   $mysite=$myhost . "/" . $myproject;
 
   //Variable que conserva los valores extraidos de la base de datos
