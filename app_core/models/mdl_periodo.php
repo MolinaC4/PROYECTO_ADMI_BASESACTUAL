@@ -251,6 +251,13 @@
 			$conexion->consulta("CALL Rotacion_cuentas_por_pagar('".$fecha1."','".$fecha2."')");
 							
 			return $fila = $conexion->extraer_registro();			 
-		}						
+		}
+
+		public function abono_cxp($fecha1,$fecha2) {
+			$conexion = new mdl_Conexion();
+			$conexion->consulta("CALL abono_cxp('".$fecha1."','".$fecha2."')");
+							
+			return $fila = $conexion->extraer_registro();			 
+		}								
 	}	
 ?>

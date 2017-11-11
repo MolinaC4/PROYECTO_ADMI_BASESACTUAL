@@ -311,6 +311,16 @@
 			}else{
 				return 0;
 			}
-		}						
+		}
+
+		public function abono_cxp($fecha1, $fecha2){
+			$periodo = new mdl_Periodo();
+			$resul = $periodo->abono_cxp($fecha1,$fecha2);
+			if (isset($resul[0])) {
+				return $resul[0];
+			}else{
+				return 0;
+			}
+		}								
 	}
 ?>

@@ -5,6 +5,11 @@
   require_once(__MDL_PATH . "mdl_html.php");
 
   $HTML = new mdl_Html();
+
+  $_SESSION['utiAntes1'] = $periodo->UtAntesInt($_SESSION['fecha1'],$_SESSION['fecha2']);
+  $_SESSION['utiAntes2'] = $periodo->UtAntesInt($_SESSION['fecha3'],$_SESSION['fecha4']);
+  $_SESSION['abono_cxp1'] = $periodo->abono_cxp($_SESSION['fecha1'],$_SESSION['fecha2']);
+  $_SESSION['abono_cxp2'] = $periodo->abono_cxp($_SESSION['fecha3'],$_SESSION['fecha4']);
 ?>
 
 <html>
@@ -29,13 +34,13 @@
 		              <tbody>
 		              	<tr>
 		                 	<td>Cobertura total del pasivo</td>
-		                 	<td>1000</td>
-		                 	<td>2000</td>
+		                 	<td><?php echo  round($_SESSION['utiAntes1'] / $_SESSION['abono_cxp1'],PHP_ROUND_HALF_DOWN) ?></td>
+		                 	<td><?php echo round($_SESSION['utiAntes2'] / $_SESSION['abono_cxp2'],PHP_ROUND_HALF_DOWN) ?></td>
 		                </tr>
 		                <tr>
 		                	<td>Razón de cobertura total</td>
-		                	<td>1000</td>
-		                	<td>2100</td>
+		                	<td><?php echo round($_SESSION['utiAntes1'] / ($_SESSION['abono_cxp1'] + 21000),PHP_ROUND_HALF_DOWN) ?></td>
+		                	<td><?php echo round($_SESSION['utiAntes2'] / ($_SESSION['abono_cxp2'] + 21000),PHP_ROUND_HALF_DOWN) ?></td>
 		                </tr>
 		              </tbody>
 		            </table>

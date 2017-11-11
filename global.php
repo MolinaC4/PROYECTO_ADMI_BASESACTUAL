@@ -2,8 +2,8 @@
 
   // ------ Variables que definen el nombre actual del hosting -------
 
-  $myhost="http://localhost:8080"; //WIS
-  //$myhost="http://localhost:8080"; //ALE Y MILTON
+  //$myhost="http://localhost:8080"; //WIS
+  $myhost="http://localhost"; //ALE Y MILTON
   $myproject="PROYECTO_ADMI_BASESACTUAL";
   $mysite=$myhost . "/" . $myproject;
 

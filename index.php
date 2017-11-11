@@ -41,8 +41,8 @@
 		$_SESSION['totalPasivo2'] = 0;
 		$_SESSION['patrimonio1'] = 0;
 		$_SESSION['patrimonio2'] = 0;
-		$_SESSION['totalPasiMatri1'] = 0;
-		$_SESSION['totalPasiMatri2'] = 0;
+		$_SESSION['abono_cxp1'] = 0;
+		$_SESSION['abono_cxp2'] = 0;
 
 		error_reporting(E_ALL);  ini_set('display_errors', 1); 
 
