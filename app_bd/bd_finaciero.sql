@@ -1,12 +1,22 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Versión del servidor:         10.1.22-MariaDB - mariadb.org binary distribution
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             9.4.0.5125
+-- --------------------------------------------------------
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- Volcando estructura de base de datos para bd_financiero
 CREATE DATABASE IF NOT EXISTS `bd_financiero` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `bd_financiero`;
 
+-- Volcando estructura para tabla bd_financiero.articulo
 CREATE TABLE IF NOT EXISTS `articulo` (
   `codigo` varchar(50) NOT NULL,
   `descripcion` varchar(100) DEFAULT NULL,
@@ -18,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.articulo: 4.023 rows
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 INSERT INTO `articulo` (`codigo`, `descripcion`, `costo`, `cantidad`, `familia`, `gravado`, `venta`) VALUES
 	('1933', 'CANDADO SEG 30MM LATON', 1750, 0, 2, 1, 2769),
@@ -4045,6 +4056,7 @@ INSERT INTO `articulo` (`codigo`, `descripcion`, `costo`, `cantidad`, `familia`,
 	('427', ' SULFATO DE  MAGNESIO AGROTICO (KILO)', 855, 0, 1, 0, 1150);
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_actiFN1
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_actiFN1`(
 	IN `fecha1` DATETIME,
@@ -4056,6 +4068,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_actiFN2
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_actiFN2`(
 	IN `fecha1` DATETIME,
@@ -4067,6 +4080,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_cuentasXcobrar
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_cuentasXcobrar`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -4075,6 +4089,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_cuentasXpagar
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_cuentasXpagar`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -4083,6 +4098,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_efectivo1
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_efectivo1`(
 	IN `fecha1` DATETIME,
@@ -4094,6 +4110,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_efectivo2
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_efectivo2`(
 	IN `fecha1` DATETIME,
@@ -4105,6 +4122,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_inventarios
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_inventarios`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -4114,6 +4132,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_PasiLP1
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_PasiLP1`(
 	IN `fecha1` DATETIME,
@@ -4125,6 +4144,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_PasiLP2
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_PasiLP2`(
 	IN `fecha1` DATETIME,
@@ -4136,6 +4156,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_Patrimonio
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_Patrimonio`(
 	IN `fecha1` DATETIME,
@@ -4147,6 +4168,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_totalActivos
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_totalActivos`(
 	IN `fecha1` DATETIME,
@@ -4159,6 +4181,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_totalActivosCirculantes
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_totalActivosCirculantes`(
 	IN `fecha1` DATETIME,
@@ -4171,6 +4194,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_totalPasivo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_totalPasivo`(
 	IN `fecha1` DATETIME,
@@ -4183,6 +4207,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.balanceGeneral_totalPasivoPatrimonio
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `balanceGeneral_totalPasivoPatrimonio`(
 	IN `fecha1` DATETIME,
@@ -4196,6 +4221,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para tabla bd_financiero.compra
 CREATE TABLE IF NOT EXISTS `compra` (
   `codigo` int(11) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -4208,6 +4234,7 @@ CREATE TABLE IF NOT EXISTS `compra` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.compra: 2.791 rows
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
 INSERT INTO `compra` (`codigo`, `fecha`, `monto`, `descuento`, `impuesto`, `tfactura`, `aplicado`, `total`) VALUES
 	(5099, '2014-11-10 00:00:00', 358260.584, 0, 0, 2, 1, 358261),
@@ -7003,6 +7030,7 @@ INSERT INTO `compra` (`codigo`, `fecha`, `monto`, `descuento`, `impuesto`, `tfac
 	(7747, '2016-11-23 00:00:00', 142710.512, 0, 0, 2, 1, 142711);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 
+-- Volcando estructura para tabla bd_financiero.cxc
 CREATE TABLE IF NOT EXISTS `cxc` (
   `codigo` int(11) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -7013,6 +7041,7 @@ CREATE TABLE IF NOT EXISTS `cxc` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.cxc: 8.458 rows
 /*!40000 ALTER TABLE `cxc` DISABLE KEYS */;
 INSERT INTO `cxc` (`codigo`, `fecha`, `tfactura`, `monto`, `cancelada`, `pago`) VALUES
 	(32935, '2014-12-30 00:00:00', '2', 722735, 1, 722735),
@@ -15475,6 +15504,7 @@ INSERT INTO `cxc` (`codigo`, `fecha`, `tfactura`, `monto`, `cancelada`, `pago`) 
 	(39792, '2016-10-13 08:29:58', '2', 146417, 0, 106118);
 /*!40000 ALTER TABLE `cxc` ENABLE KEYS */;
 
+-- Volcando estructura para tabla bd_financiero.cxp
 CREATE TABLE IF NOT EXISTS `cxp` (
   `codigo` varchar(15) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -15485,6 +15515,7 @@ CREATE TABLE IF NOT EXISTS `cxp` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.cxp: 3.081 rows
 /*!40000 ALTER TABLE `cxp` DISABLE KEYS */;
 INSERT INTO `cxp` (`codigo`, `fecha`, `monto`, `cancelada`, `pago`, `factura`) VALUES
 	('5301', '2015-01-07 00:00:00', 581583.6, 1, 581583.6, '169103'),
@@ -18570,6 +18601,7 @@ INSERT INTO `cxp` (`codigo`, `fecha`, `monto`, `cancelada`, `pago`, `factura`) V
 	('5675', '2015-04-22 00:00:00', 329460, 1, 329460, '2500');
 /*!40000 ALTER TABLE `cxp` ENABLE KEYS */;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_antesEimpu
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_antesEimpu`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18578,6 +18610,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_costoVentas
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_costoVentas`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18586,6 +18619,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_gastoOperaciones
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_gastoOperaciones`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18594,6 +18628,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_gastosFinancieros
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_gastosFinancieros`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18602,6 +18637,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_utilidadBruta
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_utilidadBruta`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18610,6 +18646,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_utilidadNeta
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_utilidadNeta`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18618,6 +18655,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_financiero.estadoResult_ventas
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `estadoResult_ventas`(IN fecha1 DATETIME, IN fecha2 DATETIME)
 BEGIN
@@ -18626,6 +18664,7 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para tabla bd_financiero.factura
 CREATE TABLE IF NOT EXISTS `factura` (
   `codigo` int(11) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -18640,6 +18679,7 @@ CREATE TABLE IF NOT EXISTS `factura` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.factura: 22.898 rows
 /*!40000 ALTER TABLE `factura` DISABLE KEYS */;
 INSERT INTO `factura` (`codigo`, `fecha`, `costo`, `monto`, `impuestos`, `descuento`, `total`, `anulado`, `gravado`, `tfactura`) VALUES
 	(37690, '2015-12-08 06:53:13', 206584.52903999996, 313411.38, 0, 3534.5855999999994, 309876.79355999996, 1, 1, 2),
@@ -41544,6 +41584,22 @@ INSERT INTO `factura` (`codigo`, `fecha`, `costo`, `monto`, `impuestos`, `descue
 	(50931, '2016-12-31 11:26:05', 20253.12, 30379.68, 0, 0, 30379.679999999997, 0, 1, 1);
 /*!40000 ALTER TABLE `factura` ENABLE KEYS */;
 
+-- Volcando estructura para procedimiento bd_financiero.Impuestos
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Impuestos`(
+	IN `fecha1` DATE,
+	IN `fecha2` DATE
+)
+BEGIN
+
+SELECT SUM(impuestos) 
+FROM factura
+WHERE fecha BETWEEN fecha1 AND fecha2;
+
+END//
+DELIMITER ;
+
+-- Volcando estructura para tabla bd_financiero.rec_cxc
 CREATE TABLE IF NOT EXISTS `rec_cxc` (
   `codigo` int(11) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -41553,6 +41609,7 @@ CREATE TABLE IF NOT EXISTS `rec_cxc` (
   PRIMARY KEY (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.rec_cxc: 2.367 rows
 /*!40000 ALTER TABLE `rec_cxc` DISABLE KEYS */;
 INSERT INTO `rec_cxc` (`codigo`, `fecha`, `total`, `aplicado`, `anulado`) VALUES
 	(3227, '2015-01-02 00:00:00', 115599.99999999999, 1, 1),
@@ -43924,6 +43981,7 @@ INSERT INTO `rec_cxc` (`codigo`, `fecha`, `total`, `aplicado`, `anulado`) VALUES
 	(5688, '2016-12-29 00:00:00', 32263.96, 1, 0);
 /*!40000 ALTER TABLE `rec_cxc` ENABLE KEYS */;
 
+-- Volcando estructura para tabla bd_financiero.rec_cxp
 CREATE TABLE IF NOT EXISTS `rec_cxp` (
   `codigo` int(11) NOT NULL,
   `fecha` datetime DEFAULT NULL,
@@ -43932,6 +43990,7 @@ CREATE TABLE IF NOT EXISTS `rec_cxp` (
   `total` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Volcando datos para la tabla bd_financiero.rec_cxp: 1.154 rows
 /*!40000 ALTER TABLE `rec_cxp` DISABLE KEYS */;
 INSERT INTO `rec_cxp` (`codigo`, `fecha`, `aplicado`, `anulado`, `total`) VALUES
 	(10831, '2015-05-02 00:00:00', 1, 0, 223833),
@@ -45089,6 +45148,68 @@ INSERT INTO `rec_cxp` (`codigo`, `fecha`, `aplicado`, `anulado`, `total`) VALUES
 	(11824, '2016-12-26 00:00:00', 1, 0, 381942),
 	(11830, '2016-12-26 00:00:00', 1, 0, 2500267);
 /*!40000 ALTER TABLE `rec_cxp` ENABLE KEYS */;
+
+-- Volcando estructura para procedimiento bd_financiero.Rotacion_cartera
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Rotacion_cartera`(IN fecha1 DATETIME, IN fecha2 DATETIME)
+BEGIN
+#Rotacion de Cartera= Ventas a crédito / Promedio cuentas por cobrar
+SELECT ROUND(SUM(total) / (SELECT AVG(monto) + (SELECT AVG(total)
+FROM rec_cxc
+WHERE fecha BETWEEN fecha1 AND fecha2
+)
+FROM cxc
+WHERE fecha BETWEEN fecha1 AND fecha2
+),0)
+FROM factura
+WHERE tfactura = 2
+AND fecha BETWEEN fecha1 AND fecha2;
+
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_financiero.Rotacion_cuentas_por_pagar
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Rotacion_cuentas_por_pagar`(IN fecha1 DATETIME, IN fecha2 DATETIME)
+BEGIN
+#Rotacion de Cartera= Ventas a crédito / Promedio cuentas por cobrar
+SELECT ROUND(SUM(total) / (SELECT AVG(monto) + (SELECT AVG(total)
+FROM rec_cxp
+#WHERE fecha BETWEEN '2015-01-01' AND '2015-12-31'
+)
+FROM cxp
+#WHERE fecha BETWEEN '2015-01-01' AND '2015-12-31'
+))
+FROM factura
+WHERE tfactura = 2
+AND fecha BETWEEN fecha1 AND fecha2;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_financiero.Rotacion_Inven
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Rotacion_Inven`(IN fecha1 DATETIME, IN fecha2 DATETIME)
+BEGIN
+#Rotacion de Inventarios= Total de productos vendidos / Promedio del Inventario
+SELECT ROUND(SUM(total) / (SELECT AVG(costo * cantidad) FROM articulo))
+FROM factura
+WHERE fecha BETWEEN fecha1 AND fecha2;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_financiero.UtilidadPorAccion
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UtilidadPorAccion`(
+	IN `fecha1` DATE,
+	IN `fecha2` DATE
+)
+BEGIN
+
+SELECT SUM(monto) - SUM(costo) - SUM(impuestos)
+FROM factura;
+
+END//
+DELIMITER ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
