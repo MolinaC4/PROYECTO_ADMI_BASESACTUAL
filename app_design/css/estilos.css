@@ -13,6 +13,16 @@ h5{
 	left: 50px;
 }
 
+#titulo{
+	position: relative;
+	left: 370px;
+}
+
+#imagen{
+	position: relative;
+	left: 300px;
+}
+
 
 #primerperiodo{
 	width: 1213px;

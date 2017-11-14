@@ -69,7 +69,7 @@
 	    	<?php require(__VWS_PATH . "Rcobertura.php");?>
 	    </div>	 
 	    <div id="Notas" class="col s12">
-	    	
+	    	<?php require(__VWS_PATH . "notas.php");?>
 	    </div>		       	    
 	</body>
 </html>
