@@ -34,8 +34,22 @@
 		              <tbody>
 		              	<tr>
 		                 	<td>Cobertura total del pasivo</td>
-		                 	<td><?php echo  round($_SESSION['utiAntes1'] / $_SESSION['abono_cxp1'],PHP_ROUND_HALF_DOWN) ?></td>
-		                 	<td><?php echo round($_SESSION['utiAntes2'] / $_SESSION['abono_cxp2'],PHP_ROUND_HALF_DOWN) ?></td>
+		                 	<td><?php  if ($_SESSION['abono_cxp1'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round($_SESSION['utiAntes1'] / $_SESSION['abono_cxp1'],PHP_ROUND_HALF_DOWN);       
+										}
+
+		                 				?></td>
+
+		                 	<td><?php 	if ($_SESSION['abono_cxp2'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round($_SESSION['utiAntes2'] / $_SESSION['abono_cxp2'],PHP_ROUND_HALF_DOWN);       
+										}
+		                 	 ?></td>
 		                </tr>
 		                <tr>
 		                	<td>Razón de cobertura total</td>
