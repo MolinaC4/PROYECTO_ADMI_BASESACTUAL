@@ -34,6 +34,11 @@
 	$_SESSION['UtilidadPorAccion1'] = $periodo->utiNeta($_SESSION['fecha1'],$_SESSION['fecha2']);
 	$_SESSION['UtilidadPorAccion2'] = $periodo->utiNeta($_SESSION['fecha3'],$_SESSION['fecha4']);
 
+	//Rendimiento del capital comun
+	$_SESSION['totalPasivo1'] = $periodo->utiNeta($_SESSION['fecha1'],$_SESSION['fecha2']);
+	$_SESSION['totalPasivo2'] = $periodo->utiNeta($_SESSION['fecha3'],$_SESSION['fecha4']);
+
+
   	$HTML = new mdl_Html();
 ?>
 
@@ -106,16 +111,16 @@
 		                <tr>
 		                	<td>Rendimiento del capital comun</td>
 		                	<td><?php
-		                 	  echo $_SESSION['pasiLargoP1']/$_SESSION['totalAC1']-$_SESSION['totalPasivo1'];  ?></td>
+		                 	  echo $_SESSION['utiNeta1']-0/($_SESSION['totalAC1']-$_SESSION['totalPasivo1'])-0;  ?></td>
 		                	<td><?php 
-		                	echo $_SESSION['pasiLargoP2']/$_SESSION['totalAC2']-$_SESSION['totalPasivo2'];   ?></td>
+		                	echo $_SESSION['utiNeta2']-0/($_SESSION['totalAC2']-$_SESSION['totalPasivo2'])-0;   ?></td>
 		                </tr>
 		                <tr>
 		                	<td>Utilidad por accion</td>
 		                	<td><?php
-		                 	  echo $_SESSION['UtilidadPorAccion1']/10;  ?></td>
+		                 	  echo $_SESSION['UtilidadPorAccion1']/40;  ?></td>
 		                	<td><?php 
-		                	echo $_SESSION['UtilidadPorAccion2']/10;   ?></td>
+		                	echo $_SESSION['UtilidadPorAccion2']/40;   ?></td>
 		                </tr>
 		              </tbody>
 		            </table>
