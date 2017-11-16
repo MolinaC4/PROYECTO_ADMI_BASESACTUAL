@@ -44,14 +44,44 @@
 		                </tr>
 		                <tr>
 		                	<td>Índice de solvencia</td>
-		                	<td><?php
-		                 	  echo round($_SESSION['totalAC1']/$_SESSION['pasiCircu1'],PHP_ROUND_HALF_DOWN);  ?></td>
-		                	<td><?php echo round($_SESSION['totalAC2']/$_SESSION['pasiCircu2'],PHP_ROUND_HALF_DOWN);   ?></td>
+		                	<td><?php  if ($_SESSION['pasiCircu1'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round($_SESSION['totalAC1']/$_SESSION['pasiCircu1'],PHP_ROUND_HALF_DOWN);      
+										}
+
+		                 	    ?></td>
+		                	<td><?php if ($_SESSION['pasiCircu2'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round($_SESSION['totalAC2']/$_SESSION['pasiCircu2'],PHP_ROUND_HALF_DOWN);       
+										}
+		                	  ?></td>
 		                </tr>
 		                <tr>
 		                	<td>Prueba ácida</td>
-		                	<td><?php echo round(($_SESSION['totalAC1'] - $_SESSION['invent1']) / $_SESSION['pasiCircu1'],PHP_ROUND_HALF_DOWN) ?></td>
-		                	<td><?php echo round(($_SESSION['totalAC2'] - $_SESSION['invent2']) / $_SESSION['pasiCircu2'],PHP_ROUND_HALF_DOWN) ?></td>
+
+		                	<td><?php if ($_SESSION['pasiCircu1'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round(($_SESSION['totalAC1'] - $_SESSION['invent1']) / $_SESSION['pasiCircu1'],PHP_ROUND_HALF_DOWN);      
+										}
+		                	        ?>
+		                	</td>
+
+		                	<td><?php if ($_SESSION['pasiCircu2'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo round(($_SESSION['totalAC2'] - $_SESSION['invent2']) / $_SESSION['pasiCircu2'],PHP_ROUND_HALF_DOWN);      
+										}
+
+		                	 
+		                		?>         			
+		                	</td>
 		                </tr>
 		              	<tr>
 		                	<td>Rotación de inventarios</td>

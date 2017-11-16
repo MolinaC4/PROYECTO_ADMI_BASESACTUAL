@@ -58,10 +58,22 @@
 		              <tbody>
 		              	<tr>
 		                 	<td>Margen bruto de utilidad</td>
-		                 	<td><?php
-		                	echo ($_SESSION['ventas1'] - $_SESSION['costoVen1']) / $_SESSION['ventas1']; ?></td>
-		                 	<td><?php
-		                	echo ($_SESSION['ventas2'] - $_SESSION['costoVen2']) / $_SESSION['ventas2']; ?></td>
+		                 	<td><?php if ($_SESSION['ventas1'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo ($_SESSION['ventas1'] - $_SESSION['costoVen1']) / $_SESSION['ventas1'];      
+										}
+
+
+		                	 ?></td>
+		                 	<td><?php if ($_SESSION['ventas2'] == 0) {
+           									echo "Error, 0";
+                						}
+        								else { 
+											echo ($_SESSION['ventas2'] - $_SESSION['costoVen2']) / $_SESSION['ventas2'];;      
+										}
+		                	 ?></td>
 		                </tr>
 		                <tr>
 		                	<td>Margen de utilidades operacionales</td>
